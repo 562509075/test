@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title></title>
+    <style type="text/css"></style>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            $("div").animate({left:'50%'},"slow");
+        });
+        $("#b2").click(function(){
+            $("div").animate({top:'45%'});
+        });
+
+        $("#b3").click(function(){
+            $("div").animate({
+                left:'25%',
+                opacity:'0.5',
+                height:'150px',
+                width:'150px'
+            },1500);
+        });
+
+        $("#b4").click(function(){
+            var div=$("div");
+            div.animate({height:'200px',opacity:'0.4'},"slow");
+            div.animate({width:'200px',opacity:'0.8'},"slow");
+            div.animate({height:'100px',opacity:'0.4'},"slow");
+            div.animate({width:'100px',opacity:'0.8'},"slow");
+        });
+    });
+</script>
+</head>
+
+<body>
+<button id="b1">向右</button>
+<button id="b2">向下</button>
+<button id="b3">开始动画</button>
+<button id="b4">开始多个动画</button>
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;top: 3em;">
+</div>
+
+</body>
+</html>
